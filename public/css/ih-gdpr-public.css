@@ -1,0 +1,118 @@
+.ih-gdpr-offcanvas {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  overflow: auto;
+  z-index: -1;
+  transition: z-index 0s ease 0.3s, opacity 0.3s ease;
+}
+.ih-gdpr-offcanvas a {
+  text-decoration: underline;
+}
+.ih-gdpr-privacy-policy-page .ih-gdpr-offcanvas {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.ih-gdpr-offcanvas-transition {
+  display: flex;
+}
+
+.ih-gdpr-offcanvas-show {
+  opacity: 1;
+  display: flex;
+  z-index: 100000;
+}
+
+.ih-gdpr-offcanvas__container {
+  margin-top: auto;
+  background-color: #e8e8e8;
+  padding: 20px;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.ih-gdpr,
+.ih-gdpr *,
+.ih-gdpr *:before,
+.ih-gdpr *:after {
+  box-sizing: content-box;
+}
+.ih-gdpr p {
+  margin-top: 0;
+}
+
+body.ih-gdpr-privacy-policy-page {
+  overflow: auto !important;
+}
+
+a.ih-gdpr__settings-toggler {
+  text-decoration: none;
+}
+a.ih-gdpr__settings-toggler:hover {
+  text-decoration: underline;
+}
+
+.ih-gdpr__title {
+  text-align: center;
+}
+
+.ih-gdpr__description {
+  text-align: center;
+}
+
+.ih-gdpr__body {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ih-gdpr--d-none {
+  display: none;
+}
+
+.ih-gdpr__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ih-gdpr__settings-toggler span::before {
+  content: attr(data-show);
+}
+
+.ih-gdpr-accordion-show + .ih-gdpr__toolbar .ih-gdpr__settings-toggler span::before {
+  content: attr(data-hide);
+}
+
+.ih-gdpr__buttons {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.ih-gdpr-button {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.ih-gdpr-accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.ih-gdpr-accordion > div {
+  overflow: hidden;
+}
+
+.ih-gdpr-accordion-show {
+  grid-template-rows: 1fr;
+}

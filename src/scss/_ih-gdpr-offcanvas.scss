@@ -1,0 +1,44 @@
+$duration: 0.3s;
+
+.ih-gdpr-offcanvas {
+  position: fixed;
+  background-color: rgba(#000000, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  overflow: auto;
+  z-index: -1;
+  transition: z-index 0s ease $duration, opacity $duration ease;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .ih-gdpr-privacy-policy-page & {
+    background-color: transparent;
+    pointer-events: none;
+  }
+}
+
+.ih-gdpr-offcanvas-transition {
+  display: flex;
+}
+
+.ih-gdpr-offcanvas-show {
+  opacity: 1;
+  display: flex;
+  z-index: 100000;
+}
+
+.ih-gdpr-offcanvas__container {
+  margin-top: auto;
+  background-color: #e8e8e8;
+  padding: 20px;
+  width: 100%;
+  pointer-events: auto;
+}
+

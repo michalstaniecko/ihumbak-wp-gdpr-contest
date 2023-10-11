@@ -1,0 +1,73 @@
+.ih-gdpr {
+  &,
+  *,
+  *:before,
+  *:after {
+    box-sizing: content-box;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+body.ih-gdpr-privacy-policy-page {
+  overflow: auto !important;
+}
+
+a.ih-gdpr__settings-toggler {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.ih-gdpr__title {
+  text-align: center;
+}
+
+.ih-gdpr__description {
+  text-align: center;
+}
+
+.ih-gdpr__body {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ih-gdpr--d-none {
+  display: none;
+}
+
+.ih-gdpr__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ih-gdpr__settings-toggler span::before {
+  content: attr(data-show);
+}
+
+.ih-gdpr-accordion-show {
+  & + .ih-gdpr__toolbar .ih-gdpr__settings-toggler span::before {
+    content: attr(data-hide);
+  }
+}
+
+.gdpr__submit-selected {
+}
+
+.ih-gdpr__buttons {
+  display: flex;
+  column-gap: 8px;
+}
+
+.ih-gdpr-button {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
